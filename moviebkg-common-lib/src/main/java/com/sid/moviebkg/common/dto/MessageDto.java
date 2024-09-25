@@ -12,9 +12,9 @@ import java.util.Map;
 @Setter
 @Builder
 @ToString
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class MessageDto implements Serializable {
     private String code;
     private String message;
-    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private transient Map<String, Object> params;
 }
